@@ -221,6 +221,15 @@
 			"answer":{
 				"saved_as":"geolocation"
 			}
+		},
+		{
+			"id":13,
+			"title":"Please enter your name",
+			"hint":"Or you know, whatever you'd like ...",
+			"type":"text",
+			"answer":{
+				"saved_as":"name"
+			}
 		}
 	]
 }
