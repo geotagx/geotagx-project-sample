@@ -19,7 +19,7 @@
 		{
 			"id":2,
 			"title":"What color is the water?",
-			"type":"single_choice",
+			"type":"select",
 			"answer":{
 				"saved_as":"waterColor",
 				"choices":[
@@ -65,7 +65,7 @@
 		{
 			"id":6,
 			"title":"Can you see any signs of fast moving water?",
-			"type":"multiple_choice",
+			"type":"checklist",
 			"answer":{
 				"saved_as":"signsOfFastMovingWater",
 				"choices":[
@@ -78,7 +78,7 @@
 		{
 			"id":7,
 			"title":"Can you see any of the following flood protection measures?",
-			"type":"multiple_choice",
+			"type":"checklist",
 			"answer":{
 				"saved_as":"floodProtectionVisible",
 				"choices":[
@@ -103,7 +103,7 @@
 		{
 			"id":9,
 			"title":"Which sources of drinking water can you see?",
-			"type":"multiple_choice",
+			"type":"checklist",
 			"answer":{
 				"saved_as":"sourcesOfDrinkingWater",
 				"choices":[
@@ -123,7 +123,7 @@
 		{
 			"id":11,
 			"title":"Which animals do you see?",
-			"type":"illustrated_multiple_choice",
+			"type":"illustrative-checklist",
 			"answer":{
 				"saved_as":"animalsVisible",
 				"choices":[
