@@ -76,6 +76,13 @@
 					"messages":{
 						"unknown":"You may know the answer to this question but there is more than one expected answer due to the variability of points that make up the polygon submitted by a user."
 					}
+				},
+				"13":{
+					"expects":"A little known secret ...",
+					"default_message":"Due to the nature of the input (non-deterministic) required for this question, it has been answered for you.",
+					"messages":{
+						"A little known secret ...":"That's right, Jack!"
+					}
 				}
 			}
 		}
