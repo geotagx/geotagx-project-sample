@@ -26,8 +26,7 @@
 					{"Red":"Red"},
 					{"AquaBlue":"Aqua Blue"},
 					{"Green":"Green"},
-					{"Orange":"Orange"},
-					{"Other":"Other"}
+					{"Orange":"Orange"}
 				]
 			}
 		},
@@ -84,8 +83,7 @@
 				"choices":[
 					{"Sandbags":"Sandbags"},
 					{"Barriers":"Makeshift barriers"},
-					{"Embankments":"Embankments"},
-					{"Other":"Other"}
+					{"Embankments":"Embankments"}
 				]
 			}
 		},
