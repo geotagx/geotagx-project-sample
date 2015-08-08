@@ -4,7 +4,7 @@
 			"image":"http://i.imgur.com/yZrJpI3.jpg",
 			"image_source":"http://imgur.com/r/earthporn/yZrJpI3",
 			"assertions":{
-				"1":{
+				"isWaterVisible":{
 					"expects":"yes",
 					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
 					"messages":{
@@ -12,14 +12,14 @@
 						"no":"Try again. Are you sure there is no water? Check out the help for information on what you should be looking for."
 					}
 				},
-				"2":{
+				"waterColor":{
 					"expects":"aquablue",
 					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
 					"messages":{
 						"aquablue":"Correct! The water has an aqua blue hue."
 					}
 				},
-				"3":{
+				"smallPoolsOfWaterVisible":{
 					"expects":"no",
 					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
 					"messages":{
@@ -27,7 +27,7 @@
 						"yes":"Whoa! Are you sure that you see a small pool of water? Check out the help for information on what you should be looking for."
 					}
 				},
-				"5":{
+				"largeBodyOfWaterVisible":{
 					"expects":"yes",
 					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
 					"messages":{
@@ -35,7 +35,7 @@
 						"no":"Hmmm, are you sure? Check out the help for information on what you should be looking for."
 					}
 				},
-				"6":{
+				"signsOfFastMovingWater":{
 					"expects":"peaks, rough",
 					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
 					"messages":{
@@ -46,14 +46,14 @@
 						"peaks, rough, swirling":"Are you sure you see all these signs of fast moving water?"
 					}
 				},
-				"7":{
+				"floodProtectionVisible":{
 					"expects":"none",
 					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
 					"messages":{
 						"none":"Correct! There are no flood protection measures in this photo."
 					}
 				},
-				"8":{
+				"sourcesOfDrinkingWaterVisible":{
 					"expects":"no",
 					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
 					"messages":{
@@ -61,7 +61,7 @@
 						"yes":"Are you sure you can see sources of drinking water? If you are not sure what to look for, check out the help for more information."
 					}
 				},
-				"11":{
+				"animalsVisible":{
 					"expects":"none",
 					"default_message":"Are you sure you can see an animal? If you are not sure what to look for, check out the help for more information.",
 					"messages":{
@@ -70,10 +70,10 @@
 						"notclear":"Try again! If you are not sure what to look for, check out the help for more information."
 					}
 				},
-				"12":{
+				"geolocation":{
 					"skip":true
 				},
-				"13":{
+				"name":{
 					"autocomplete":true,
 					"expects":"A little known secret ...",
 					"default_message":"Due to the nature of the input (non-deterministic) required for this question, it has been answered for you.",

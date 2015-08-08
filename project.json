@@ -3,128 +3,141 @@
 	"short_name":"sample",
 	"description":"A sample GeoTag-X project.",
 	"why":"This is a simple project that highlights GeoTag-X's features.",
-	"questions":[
+	"questionnaire":[
 		{
-			"id":1,
-			"title":"Can you see any water in the photo?",
+			"key":"isWaterVisible",
 			"type":"binary",
-			"answer":{
-				"saved_as":"isWaterVisible"
-			},
-			"branch":[
-				{"yes":2},
-				{"no":"finish"}
-			]
+			"question":"Can you see any water in the photo?",
+			"branch":{
+				"yes":"waterColor",
+				"no":"end"
+			}
 		},
 		{
-			"id":2,
-			"title":"What color is the water?",
+			"key":"waterColor",
 			"type":"select",
-			"answer":{
-				"saved_as":"waterColor",
-				"choices":[
-					{"Red":"Red"},
-					{"AquaBlue":"Aqua Blue"},
-					{"Green":"Green"},
-					{"Orange":"Orange"}
+			"question":"What color is the water?",
+			"parameters":{
+				"options":[
+					{
+						"label":"Red",
+						"value":"Red"
+					},
+					{
+						"label":"Aqua Blue",
+						"value":"AquaBlue"
+					},
+					{
+						"label":"Green",
+						"value":"Green"
+					},
+					{
+						"label":"Orange",
+						"value":"Orange"
+					}
 				]
 			}
 		},
 		{
-			"id":3,
-			"title":"Can you see small pools of water?",
+			"key":"smallPoolsOfWaterVisible",
 			"type":"binary",
-			"answer":{
-				"saved_as":"smallPoolsOfWaterVisible"
-			},
-			"branch":[
-				{"no":5}
-			]
+			"question":"Can you see small pools of water?",
+			"branch":{
+				"no":"largeBodyOfWaterVisible"
+			}
 		},
 		{
-			"id":4,
-			"title":"Are these small pools of water near human shelters or a settlement?",
+			"key":"smallPoolsOfWaterNearShelters",
 			"type":"binary",
-			"answer":{
-				"saved_as":"smallPoolsOfWaterNearShelters"
-			},
-			"branch":8
+			"question":"Are these small pools of water near human shelters or a settlement?",
+			"branch":"sourcesOfDrinkingWaterVisible"
 		},
 		{
-			"id":5,
-			"title":"Can you see a large body of water?",
+			"key":"largeBodyOfWaterVisible",
 			"type":"binary",
-			"answer":{
-				"saved_as":"largeBodyOfWaterVisible"
-			},
-			"branch":[
-				{"no":7}
-			]
+			"question":"Can you see a large body of water?",
+			"branch":{
+				"no":"floodProtectionVisible"
+			}
 		},
 		{
-			"id":6,
-			"title":"Can you see any signs of fast moving water?",
+			"key":"signsOfFastMovingWater",
 			"type":"checklist",
-			"answer":{
-				"saved_as":"signsOfFastMovingWater",
-				"choices":[
-					{"Peaks":"White peaks in the water"},
-					{"Rough":"Rough water surface"},
-					{"Swirling":"Water swirling around objects"}
+			"question":"Can you see any signs of fast moving water?",
+			"parameters":{
+				"options":[
+					{
+						"label":"White peaks in the water",
+						"value":"Peaks"
+					},
+					{
+						"label":"Rough water surface",
+						"value":"Rough"
+					},
+					{
+						"label":"Water swirling around objects",
+						"value":"Swirling"
+					}
 				]
 			}
 		},
 		{
-			"id":7,
-			"title":"Can you see any of the following flood protection measures?",
+			"key":"floodProtectionVisible",
 			"type":"checklist",
-			"answer":{
-				"saved_as":"floodProtectionVisible",
-				"choices":[
-					{"Sandbags":"Sandbags"},
-					{"Barriers":"Makeshift barriers"},
-					{"Embankments":"Embankments"}
+			"question":"Can you see any of the following flood protection measures?",
+			"parameters":{
+				"options":[
+					{
+						"label":"Sandbags",
+						"value":"Sandbags"
+					},
+					{
+						"label":"Makeshift barriers",
+						"value":"Barriers"
+					},
+					{
+						"label":"Embankments",
+						"value":"Embankments"
+					}
 				]
 			}
 		},
 		{
-			"id":8,
-			"title":"Can you see any sources of drinking water?",
+			"key":"sourcesOfDrinkingWaterVisible",
 			"type":"binary",
-			"answer":{
-				"saved_as":"sourcesOfDrinkingWaterVisible"
-			},
-			"branch":[
-				{"no":11}
-			]
+			"question":"Can you see any sources of drinking water?",
+			"branch":{
+				"no":"animalsVisible"
+			}
 		},
 		{
-			"id":9,
-			"title":"Which sources of drinking water can you see?",
+			"key":"sourcesOfDrinkingWater",
 			"type":"checklist",
-			"answer":{
-				"saved_as":"sourcesOfDrinkingWater",
-				"choices":[
-					{"Pipes":"Water pipes and access taps"},
-					{"Tankers":"Water tankers"}
+			"question":"Which sources of drinking water can you see?",
+			"parameters":{
+				"options":[
+					{
+						"label":"Water pipes and access taps",
+						"value":"Pipes"
+					},
+					{
+						"label":"Water tankers",
+						"value":"Tankers"
+					}
 				]
 			}
 		},
 		{
-			"id":10,
-			"title":"Have they been affected by the flood waters?",
+			"key":"sourcesOfDrinkingWaterAffected",
 			"type":"binary",
-			"answer":{
-				"saved_as":"sourcesOfDrinkingWaterAffected"
-			}
+			"question":"Have they been affected by the flood waters?"
 		},
 		{
-			"id":11,
-			"title":"Which animals do you see?",
+			"key":"animalsVisible",
 			"type":"illustrative-checklist",
-			"answer":{
-				"saved_as":"animalsVisible",
-				"choices":[
+			"question":"Which animals do you see?",
+			"parameters":{
+				"options":[
 					{
 						"label":"Cattle",
 						"value":"Cattle",
@@ -213,30 +226,25 @@
 			}
 		},
 		{
-			"id":12,
-			"title":"Can you geo-localize the photo?",
+			"key":"geolocation",
 			"type":"geotagging",
-			"answer":{
-				"saved_as":"geolocation",
+			"question":"Can you geo-localize the photo?",
+			"parameters":{
 				"location":"Geneva"
 			}
 		},
 		{
-			"id":13,
-			"title":"Please enter your name",
-			"hint":"Or you know, whatever you'd like ...",
+			"key":"name",
 			"type":"text",
-			"answer":{
-				"saved_as":"name"
+			"question":"Please enter your name",
+			"parameters":{
+				"placeholder":"Or you know, whatever you'd like ..."
 			}
 		},
 		{
-			"id":14,
-			"title":"What day is it today?",
+			"key":"today",
 			"type":"date",
-			"answer":{
-				"saved_as":"today"
-			}
+			"question":"What day is it today?"
 		}
 	]
 }
