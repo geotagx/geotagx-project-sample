@@ -228,6 +228,14 @@
 			"answer":{
 				"saved_as":"name"
 			}
+		},
+		{
+			"id":14,
+			"title":"What day is it today?",
+			"type":"date",
+			"answer":{
+				"saved_as":"today"
+			}
 		}
 	]
 }
