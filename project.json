@@ -217,7 +217,8 @@
 			"title":"Can you geo-localize the photo?",
 			"type":"geotagging",
 			"answer":{
-				"saved_as":"geolocation"
+				"saved_as":"geolocation",
+				"location":"Geneva"
 			}
 		},
 		{
