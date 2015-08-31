@@ -8,6 +8,7 @@
 			"key":"isWaterVisible",
 			"type":"binary",
 			"question":"Can you see any water in the photo?",
+			"hint":"More specifically, large or small water bodies.",
 			"branch":{
 				"yes":"waterColor",
 				"no":"end"
