@@ -8,7 +8,7 @@
 			"key":"isWaterVisible",
 			"type":"binary",
 			"question":"Can you see any water in the photo?",
-			"hint":"More specifically, large or small water bodies.",
+			"hint":"More specifically, can you see small water bodies like puddles, or large ones such as rivers or lakes?",
 			"branch":{
 				"yes":"waterColor",
 				"no":"end"
